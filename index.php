@@ -18,20 +18,25 @@ function hello(){
 
 <body>
     <?php include 'listDir.php';echo "HEllow World";?>
-</body>
+    <y>
+        <!-- <input type=button onClick="sample()" value='Users'> -->
 
+        <script>
+            // Function to handle the click event
+            function handleClick(event) {
+                // alert("Clicked item ID: " + event.target.id + "--" + window.location.href);
+                window.location.href = window.location.href + event.target.id;
 
-<script>
-    // Function to handle the click event
-    function handleClick(event) {
-        alert("Clicked item ID: " + event.target.id + "--" + window.location.href);
+            }
 
-    }
+            // function sample() {
+            //     parent.location = 'C:/Users/' + window.location.href + event.target.id;
+            // }
 
-    // Add event listener to each <li> element
-    document.querySelectorAll("li").forEach(function (li) {
-        li.addEventListener("click", handleClick);
-    });
-</script>
+            // Add event listener to each <li> element
+            document.querySelectorAll("li").forEach(function (li) {
+                li.addEventListener("click", handleClick);
+            });
+        </script>
 
 </html>
